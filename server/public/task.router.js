@@ -33,10 +33,10 @@ router.post('/', (req, res) => {
     //is it ok that this is the same name then in the client i think or the server?
     let newTaskToAddToDatabase = req.body
 
-    console.log("res.body:", req.body);
+    console.log("req.body:", req.body);
 
     const queryText = `
-    INSERT INTO tasks (task)
+    INSERT INTO "tasks" (task)
     VALUES ($1)
     `
 
