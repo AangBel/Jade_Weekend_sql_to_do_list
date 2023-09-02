@@ -1,9 +1,15 @@
 body {
   background-color: azure;
+  font-size: 50px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  margin: 0;
+  padding: 0;
 }
 
 header {
   background-color: lightskyblue;
+  text-align: center;
+  padding:20px;
   margin: 20px;
   margin-bottom: 80px;
 }
@@ -23,9 +29,20 @@ h1 {
   background-color: aqua;
   border-radius: 10px;
 }
-/* #taskDiv{
+
+
+#taskTable{
+border:10px;
+align-content: center;
+}
+
+#taskDiv{
 text-align: center;
-} */
+border: 10px solid blue;
+padding:10px;
+margin-left:auto;
+margin-right:auto;
+}
 
 /* table{
 text-align: center;
