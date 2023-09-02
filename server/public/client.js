@@ -1,14 +1,21 @@
 $(document).ready(onReady);
 function onReady() {
-  console.log("Client side javascript works!");
-  $("#add_btn").on("click", addButtonFunction);
+console.log("Client side javascript works!");
+$("#add_btn").on("click", addButtonFunction);
 $('#taskDiv').on('click', '.delete-btn', deleteTaskButton);
+$('#taskDiv').on('click', '.check', doneCheckMark);
+
 
   getTasks();
 } //end of onready
 
-
-
+function doneCheckMark(){
+const row = (this).closest('tr');
+row.addClass('row-green');
+// $('#taskTableBody').addClass('.row', function('background-color: green'));
+}//end of done 
+// TODO- working on a click event for the check mark to turn the background of the row green 
+//but also not sure about the redundancy of status and all done ..
 
 
 function addButtonFunction() {
@@ -56,8 +63,13 @@ function getTasks() {
 
       for (let tasks of tasksToReceive) {
         $("#taskTableBody").append(`
-        <tr>
+        <tr class="row">
         <td>${tasks.task}</td>
+        <td>${tasks.status}</td>
+        <td>
+        <button class="check" 
+        data-check-id=${tasks.status}>✅</button>
+        </td>
         <td>
         <button class="delete-btn" 
         data-task-id=${tasks.id}>Delete</button>
