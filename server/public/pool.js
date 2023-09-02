@@ -1,5 +1,7 @@
 // The pg library makes it easy to connect to a database
 // and send SQL statements
+// const express = require('express');
+// const router = express.Router();
 const pg = require('pg');
 
 // A pool is a connection to the database

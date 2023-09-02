@@ -10,7 +10,6 @@ function addButtonFunction() {
 
   let taskToSend = {
     task: taskInput
-    // status:''
   };
   console.log("this should be the task to send", taskToSend);
 
@@ -21,7 +20,7 @@ function addButtonFunction() {
   })
     .then(function (response) {
       console.log(response);
-    // getTasks();
+    getTasks();
     })
     .catch(function (error) {
       console.log("error in tasks post under add button function", error);
