@@ -44,10 +44,15 @@ table {
 
 th,
 td {
+  font-family: 'Dancing Script', cursive;
   padding: 12px;
   text-align: left;
   border-bottom: 1px solid #ddd;
   color:darkgray;
+}
+
+td{
+  font-family: 'Caveat', cursive;
 }
 
 th {
