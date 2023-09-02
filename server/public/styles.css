@@ -15,6 +15,7 @@ header {
 
 h1 {
   color: #ED5C9B;
+  font-family: 'Dancing Script', cursive;
 }
 
 #inputDiv {
@@ -46,6 +47,7 @@ td {
   padding: 12px;
   text-align: left;
   border-bottom: 1px solid #ddd;
+  color:darkgray;
 }
 
 th {
@@ -58,7 +60,7 @@ td:nth-child(2) {
 }
 
 .delete-btn {
-  background-color: turquoise;
+  background-color: #F18DBC;
   font-size: 30px;
   color: white;
   border: none;
