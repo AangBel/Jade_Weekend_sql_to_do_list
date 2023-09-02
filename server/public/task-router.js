@@ -36,4 +36,23 @@ router.post("/", (req, res) => {
     });
 });
 
+router.delete("/:id", (req, res) => {
+    let idToDelete = req.params.id; 
+  
+    let mySqlQuery = `
+    DELETE FROM tasks WHERE id = $1;
+    `;
+    pool
+      .query(mySqlQuery, [idToDelete])
+      .then(() => {
+        console.log("delete request successful", idToDelete);
+        res.sendStatus(202);
+      })
+      .catch((err) => {
+        console.log(`delete request failed: ${idToDelete}`, err);
+        res.sendStatus(500);
+      });
+  });
+
+
 module.exports = router;

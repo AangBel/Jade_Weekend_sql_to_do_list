@@ -33,7 +33,7 @@ app.post("/tasks", (req, res) => {
 //   let taskInput= req.body.task;
 
   let taskAttempt= req.body;
-console.log('this should be the taskinput:', taskAttempt);
+console.log('this should be the taskAttempt:', taskAttempt);
 
 //   let taskToSend = req.body;
   console.log("task to send:", taskAttempt);
