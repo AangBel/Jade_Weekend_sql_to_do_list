@@ -44,6 +44,7 @@ function addButtonFunction() {
   })
     .then(function (response) {
       console.log(response);
+      let taskInput = $("#taskText").val("");
       getTasks();
     })
     .catch(function (error) {
