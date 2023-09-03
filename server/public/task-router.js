@@ -53,6 +53,22 @@ router.delete("/:id", (req, res) => {
         res.sendStatus(500);
       });
   });
-
+  
+  router.put("/:id",(req, res) => {
+    const taskId = req.params.id;
+        let mySqlQuery = `
+        UPDATE tasks SET status = true WHERE id = $1;
+        `;
+          pool.
+          query(mySqlQuery, [taskId])
+          .then(() => {
+            console.log('Task marked as complete:', taskId);
+            res.sendStatus(200);
+          })
+          .catch((err) => {
+            console.error('Error marking task as complete:', err);
+            res.sendStatus(500);
+    });
+});
 
 module.exports = router;

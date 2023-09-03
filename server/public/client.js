@@ -5,6 +5,7 @@ $("#add_btn").on("click", addButtonFunction);
 $('#taskDiv').on('click', '.delete-btn', deleteTaskButton);
 $('#taskDiv').on('click', '.check', doneCheckMark);
 
+// $('#taskDiv').on('click', '.check', markTaskAsComplete);
 
   getTasks();
 } //end of onready
@@ -12,10 +13,19 @@ $('#taskDiv').on('click', '.check', doneCheckMark);
 function doneCheckMark(){
 const row = $(this).closest('tr');
 row.addClass('row-green');
-// $('#taskTableBody').addClass('.row', function('background-color: green'));
-}//end of done 
-// TODO- working on a click event for the check mark to turn the background of the row green 
 
+$.ajax({
+  method: 'PUT',
+  url: '/tasks',
+})
+.then(function (response) {
+  console.log(`Task marked as complete:`);
+  getTasks();
+})
+.catch(function (error) {
+  console.error('Error marking task as complete:', error);
+});
+}//end of done 
 
 
 function addButtonFunction() {
@@ -61,7 +71,14 @@ function getTasks() {
       const taskTableBody = $("#taskDiv tbody");
       taskTableBody.empty();
 
+      
       for (let tasks of tasksToReceive) {
+
+        // TODO-- need to look more into this and not currently working - not currently changing
+        // TODO display and its not currently connected to the add class change meaning that task status = true;
+        // TODO and get the status to stay 
+        // const statusText = tasks.status ? 'Yes' : 'No';
+        
         $("#taskTableBody").append(`
         <tr class="row">
         <td>${tasks.task}</td>
@@ -81,6 +98,26 @@ function getTasks() {
       console.log("error in tasks get in get tasks function", error);
     });
 } // end getTasks
+
+
+// function markTaskAsComplete() {
+//   const taskId = $(this).data('check-id');
+
+//   console.log(this);
+//   console.log('this is the taskID under mark task as complete:', taskId);
+
+//   $.ajax({
+//       method: 'PUT',
+//       url: '/tasks',
+//   })
+//   .then(function (response) {
+//       console.log(`Task marked as complete: ${taskId}`);
+//       getTasks();
+//   })
+//   .catch(function (error) {
+//       console.error('Error marking task as complete:', error);
+//   });
+// }//end of mark task 
 
 
 
