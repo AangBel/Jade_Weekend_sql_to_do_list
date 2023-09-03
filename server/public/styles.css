@@ -75,7 +75,7 @@ td:nth-child(2) {
 }
 
 .delete-btn:hover {
-  background-color: teal;
+  background-color: #981251;
 }
 
 #taskText {
@@ -88,4 +88,29 @@ td:nth-child(2) {
 
 .row-green{
 background-color:lightgreen;
+}
+
+
+.task-input {
+    margin-right: 10px; 
+    padding:5px;
+    width:500px;
+    height:20px;
+}
+
+.add-button {
+    flex: none; /* Prevent the button from growing */
+    width:200px;
+    height:68px;
+}
+
+.check{
+font-size: 40px;
+background-color: transparent;
+border: none;
+cursor: pointer;
+padding:0;
+margin:0;
+display: inline-block;
+vertical-align: middle;
 }

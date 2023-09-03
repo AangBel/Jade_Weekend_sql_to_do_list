@@ -10,9 +10,9 @@ app.use(express.static("server/public"));
 let taskRouter = require("./public/task-router");
 app.use("/tasks", taskRouter);
 
-app.get("/tasks", (req, res) => {
-  console.log("we are inside the get request");
-});
+// app.get("/tasks", (req, res) => {
+//   console.log("we are inside the get request");
+// });
 
 app.post("/tasks", (req, res) => {
   console.log("we are inside the post ");

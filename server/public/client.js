@@ -10,12 +10,12 @@ $('#taskDiv').on('click', '.check', doneCheckMark);
 } //end of onready
 
 function doneCheckMark(){
-const row = (this).closest('tr');
+const row = $(this).closest('tr');
 row.addClass('row-green');
 // $('#taskTableBody').addClass('.row', function('background-color: green'));
 }//end of done 
 // TODO- working on a click event for the check mark to turn the background of the row green 
-//but also not sure about the redundancy of status and all done ..
+
 
 
 function addButtonFunction() {
