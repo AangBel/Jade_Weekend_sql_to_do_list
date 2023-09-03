@@ -99,7 +99,7 @@ function getTasks() {
     });
 } // end getTasks
 
-
+// TODO
 // function markTaskAsComplete() {
 //   const taskId = $(this).data('check-id');
 
@@ -119,7 +119,22 @@ function getTasks() {
 //   });
 // }//end of mark task 
 
-
+// TODO
+// function voteOnSong(tasks.id, tasks.status){
+//   $.ajax({
+//     method: 'PUT',
+//     url: `/songs/rank/${songId}`,
+//     data: {
+//       status: voteDirection
+//     }
+//   })
+//   .then( function(response) {
+//     getTasks();
+//   })
+//   .catch( function(error) {
+//     alert('Error on vote on song', error);
+//   })
+// }
 
 
 
