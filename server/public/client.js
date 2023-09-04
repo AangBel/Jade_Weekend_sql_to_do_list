@@ -98,15 +98,13 @@ function getTasks() {
         
       for (let tasks of tasksToReceive) {
 
-        // TODO-- need to look more into this and not currently working - not currently changing
-        // TODO display and its not currently connected to the add class change meaning that task status = true;
-        // TODO and get the status to stay 
-        // const statusText = tasks.status ? 'Yes' : 'No';
+        const statusText = tasks.status ? 'Complete' : 'Incomplete'; 
+        const rowClass = tasks.status ? 'row-green' : '';
         
         $("#taskTableBody").append(`
-        <tr class="row">
+        <tr class="row ${rowClass}">
         <td>${tasks.task}</td>
-        <td>${tasks.status}</td>
+        <td>${statusText}</td>
         <td>
         <button class="check" data-task-id="${tasks.id}" data-check-id="${tasks.status}">✅</button>
         </td>
