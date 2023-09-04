@@ -1,5 +1,5 @@
 body {
-  background-color:#fdeef5;
+  background-color: #fdeef5;
   font-size: 50px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande";
   margin: 0;
@@ -15,8 +15,8 @@ header {
 }
 
 h1 {
-  color: #ED5C9B;
-  font-family: 'Dancing Script', cursive;
+  color: #ed5c9b;
+  font-family: "Dancing Script", cursive;
 }
 
 #inputDiv {
@@ -26,7 +26,7 @@ h1 {
 }
 
 #add_btn {
-  background-color: #F18DBC;
+  background-color: #f18dbc;
   font-size: 30px;
   color: white;
   border: none;
@@ -41,25 +41,24 @@ table {
   margin: 20px auto;
   border-collapse: collapse;
   background-color: white;
-
 }
 
 th,
 td {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   padding: 12px;
   text-align: left;
   border-bottom: 1px solid #ddd;
   border: 1px solid #ddd;
-  color:darkgray;
+  color: darkgray;
 }
 
-td{
-  font-family: 'Caveat', cursive;
+td {
+  font-family: "Caveat", cursive;
 }
 
 th {
-  background-color: #E0218A;
+  background-color: #e0218a;
   color: white;
 }
 
@@ -68,7 +67,7 @@ td:nth-child(2) {
 }
 
 .delete-btn {
-  background-color: #F18DBC;
+  background-color: #f18dbc;
   font-size: 30px;
   color: white;
   border: none;
@@ -82,52 +81,50 @@ td:nth-child(2) {
 }
 
 #taskText {
-  padding: 20px; 
-  width: 300px; 
+  padding: 20px;
+  width: 300px;
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-right: 10px;
 }
 
-.row-green{
-background-color:rgb(182, 236, 182);
+.row-green {
+  background-color: rgb(182, 236, 182);
 }
 
-
 .task-input {
-    margin-right: 10px; 
-    padding:5px;
-    width:500px;
-    height:20px;
+  margin-right: 10px;
+  padding: 5px;
+  width: 500px;
+  height: 20px;
 }
 
 .add-button {
-    flex: none; 
-    width:200px;
-    height:68px;
+  flex: none;
+  width: 200px;
+  height: 68px;
 }
 
-.check{
-font-size: 40px;
-background-color: transparent;
-border: none;
-cursor: pointer;
-padding:0;
-margin:0;
-/* display: inline-block; */
-vertical-align: middle;
-/* align-items: center; */
+.check {
+  font-size: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+
+  vertical-align: middle;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: pink; 
+  background-color: pink;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #f0f0f0; 
+  background-color: #f0f0f0;
 }
 
 ::-webkit-scrollbar {
-  width: 12px; 
-  height: 12px; 
+  width: 12px;
+  height: 12px;
 }

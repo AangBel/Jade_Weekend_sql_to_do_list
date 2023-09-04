@@ -10,7 +10,6 @@ app.use(express.static("server/public"));
 let taskRouter = require("./public/task-router");
 app.use("/tasks", taskRouter);
 
-
 app.post("/tasks", (req, res) => {
   console.log("we are inside the post ");
 
@@ -20,8 +19,6 @@ app.post("/tasks", (req, res) => {
   console.log("task to send:", taskAttempt);
   console.log("req.body:", req.body);
 });
-
-
 
 let port = 5001;
 app.listen(5001, function () {

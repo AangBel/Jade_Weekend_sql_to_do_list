@@ -1,23 +1,22 @@
 $(document).ready(onReady);
 
 function onReady() {
-console.log("Client side javascript works!");
-$("#add_btn").on("click", addButtonFunction);
-$('#taskDiv').on('click', '.delete-btn', deleteTaskButton);
-$('#taskDiv').on('click', '.check', doneCheckMark);
+  console.log("Client side javascript works!");
+  $("#add_btn").on("click", addButtonFunction);
+  $("#taskDiv").on("click", ".delete-btn", deleteTaskButton);
+  $("#taskDiv").on("click", ".check", doneCheckMark);
 
   getTasks();
 } //end of onready
 
 let currentStatus = $(this).data("check-id");
-  console.log("this should be the current status", currentStatus);
+console.log("this should be the current status", currentStatus);
 
 function doneCheckMark() {
-
   const button = $(this);
-  const row = button.closest('tr');
+  const row = button.closest("tr");
 
-  row.addClass('row-green');
+  row.addClass("row-green");
 
   let taskID = $(this).data("task-id");
   console.log("this should be the taskID", taskID);
@@ -26,25 +25,22 @@ function doneCheckMark() {
   console.log("this should be the current status", currentStatus);
 
   const taskToCheck = {
-    status: true, 
+    status: true,
   };
 
   $.ajax({
-    method: 'PUT',
+    method: "PUT",
     url: `/tasks/${taskID}`,
     data: taskToCheck,
   })
     .then(function (response) {
-    
       console.log(`Task marked as complete: ${taskID}`);
-      getTasks(); 
+      getTasks();
     })
     .catch(function (error) {
-      console.error('Error marking task as complete:', error);
+      console.error("Error marking task as complete:", error);
     });
 }
-
-
 
 function addButtonFunction() {
   let taskInput = $("#taskText").val();
@@ -70,9 +66,6 @@ function addButtonFunction() {
     });
 } //end of addButtonFunction
 
-
-
-
 function getTasks() {
   console.log("in getTasks");
 
@@ -86,12 +79,10 @@ function getTasks() {
       const taskTableBody = $("#taskDiv tbody");
       taskTableBody.empty();
 
-        
       for (let tasks of tasksToReceive) {
+        const statusText = tasks.status ? "Complete" : "Incomplete";
+        const rowClass = tasks.status ? "row-green" : "";
 
-        const statusText = tasks.status ? 'Complete' : 'Incomplete'; 
-        const rowClass = tasks.status ? 'row-green' : '';
-        
         $("#taskTableBody").append(`
         <tr class="row ${rowClass}">
         <td>${tasks.task}</td>
@@ -111,7 +102,6 @@ function getTasks() {
     });
 } // end getTasks
 
-
 function deleteTaskButton() {
   console.log("clicked the delete button");
 
@@ -122,7 +112,7 @@ function deleteTaskButton() {
 
   $.ajax({
     method: "DELETE",
-    url: `/tasks/${idToDelete}`, 
+    url: `/tasks/${idToDelete}`,
   })
     .then((results) => {
       console.log(
@@ -134,4 +124,4 @@ function deleteTaskButton() {
     .catch((err) => {
       alert("Error on delete, id:", idToDelete);
     });
-} //end of delete task button 
+} //end of delete task button
