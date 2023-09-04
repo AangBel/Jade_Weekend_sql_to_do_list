@@ -13,22 +13,14 @@ let currentStatus = $(this).data("check-id");
   console.log("this should be the current status", currentStatus);
 
 function doneCheckMark() {
-  // const row = $(this).closest('tr');
-  // console.log(row);
-  // row.addClass('row-green');
 
   const button = $(this);
   const row = button.closest('tr');
 
-  // Add class to change the background color to green
   row.addClass('row-green');
 
   let taskID = $(this).data("task-id");
   console.log("this should be the taskID", taskID);
-
-  // let taskToGreen = $(this).data().value;
-  // console.log("this should be the task to make green", taskToGreen);
-  // taskToGreen.addClass('row-green');
 
   let currentStatus = $(this).data("check-id");
   console.log("this should be the current status", currentStatus);
@@ -43,10 +35,9 @@ function doneCheckMark() {
     data: taskToCheck,
   })
     .then(function (response) {
-      // Update the task status in the DOM (if needed)
-      // You can add code here to update the status in the DOM
+    
       console.log(`Task marked as complete: ${taskID}`);
-      getTasks(); // Refresh the task list
+      getTasks(); 
     })
     .catch(function (error) {
       console.error('Error marking task as complete:', error);
@@ -119,27 +110,6 @@ function getTasks() {
       console.log("error in tasks get in get tasks function", error);
     });
 } // end getTasks
-
-// TODO
-// function markTaskAsComplete() {
-//   const taskId = $(this).data('check-id');
-
-//   console.log(this);
-//   console.log('this is the taskID under mark task as complete:', taskId);
-
-//   $.ajax({
-//       method: 'PUT',
-//       url: '/tasks',
-//   })
-//   .then(function (response) {
-//       console.log(`Task marked as complete: ${taskId}`);
-//       getTasks();
-//   })
-//   .catch(function (error) {
-//       console.error('Error marking task as complete:', error);
-//   });
-// }//end of mark task 
-
 
 
 function deleteTaskButton() {
