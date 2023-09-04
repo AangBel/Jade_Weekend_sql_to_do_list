@@ -8,7 +8,7 @@ const pg = require('pg');
 // We send SQL to the database using `pool.query()`
 const pool = new pg.Pool({
     // The name of your database.  This will change for every app!
-    database: 'tasks_database',
+    database: 'weekend-to-do-app',
     // Where is your database?  localhost == on your computer!
     host: 'localhost',
     // Postgres listens for network connections on port 5432, by default!
