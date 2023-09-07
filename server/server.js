@@ -22,21 +22,21 @@ app.post("/tasks", (req, res) => {
 });
 
 //=====================================================
-// app.js
-const postgres = require('postgres');
-require('dotenv').config();
+// // app.js
+// const postgres = require('postgres');
+// require('dotenv').config();
 
-const { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
-const URL = `postgres://${PGUSER}:${PGPASSWORD}@${PGHOST}/${PGDATABASE}?options=project%3D${ENDPOINT_ID}`;
+// const { PGHOST, PGDATABASE, PGUSER, PGPASSWORD, ENDPOINT_ID } = process.env;
+// const URL = `postgres://${PGUSER}:${PGPASSWORD}@${PGHOST}/${PGDATABASE}?options=project%3D${ENDPOINT_ID}`;
 
-const sql = postgres(URL, { ssl: 'require' });
+// const sql = postgres(URL, { ssl: 'require' });
 
-async function getPgVersion() {
-  const result = await sql`select version()`;
-  console.log(result);
-}
+// async function getPgVersion() {
+//   const result = await sql`select version()`;
+//   console.log(result);
+// }
 
-getPgVersion();
+// getPgVersion();
 
 
 
