@@ -1,6 +1,3 @@
 .vscode
 node_modules
-jquery.js
-package-lock.json
-package.json
 .env
