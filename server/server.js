@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
@@ -20,7 +21,9 @@ app.post("/tasks", (req, res) => {
   console.log("req.body:", req.body);
 });
 
-let port = 5001;
-app.listen(5001, function () {
-  console.log(`You started the server! It is running on ${port} .`);
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, function () {
+  console.log(`You started the server! It is running on ${PORT} .`);
 });

@@ -20,14 +20,14 @@ h1 {
 }
 
 #inputDiv {
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
   margin: 20px auto;
 }
 
 #add_btn {
   background-color: #f18dbc;
-  font-size: 30px;
+  font-size: 25px;
   color: white;
   border: none;
   border-radius: 4px;
