@@ -3,8 +3,10 @@
 // const express = require('express');
 // const router = express.Router();
 const pg = require('pg');
+
 const { PGHOST, PGDATABASE, PGUSER, PGPASSWORD } = process.env;
 
+const Pool = pg.Pool;
 
 const pool = new Pool({
     host: PGHOST,
