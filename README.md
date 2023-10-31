@@ -1,6 +1,7 @@
 # Project Name
+<img width="1492" alt="To do list" src="https://github.com/AangBel/SQL_To-Do_List/assets/119378254/fb797ef3-5ab4-4ce7-a4ac-fafe3580b692">
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+
 
 ## Description
 
